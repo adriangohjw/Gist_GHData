@@ -63,16 +63,6 @@ async function updateGist(data) {
   ];
   lines.push(publicGists.join(" "));
 
-  const publicKeys = [
-    `🔑 ${data[6]} Public Keys`
-  ];
-  lines.push(publicKeys.join(" "));
-
-  const isHireable = [
-    data[4]
-  ];
-  lines.push(isHireable.join(" "));
-
   if (lines.length == 0) return;
 
   try {
@@ -83,7 +73,7 @@ async function updateGist(data) {
       gist_id: gistId,
       files: {
         [filename]: {
-          filename: `🐱 GitHub Data`,
+          filename: `🤘 GitHub Data`,
           content: lines.join("\n")
         }
       }
